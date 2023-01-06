@@ -1,1 +1,69 @@
-@import '~bootstrap/scss/bootstrap'
+@use './partials/mixins' as*;
+@use  "./partials/variables" as *;
+@import '~bootstrap/scss/bootstrap';
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+}
+
+.my-container {
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+main {
+    background-color: $black;
+}
+
+header {
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    nav {
+        height: 120px;
+    }
+    ul {
+        list-style: none;
+        height: 120px;
+        @include dflex;
+        li a {
+            display: inline-block;
+            padding: 0 1rem;
+            text-decoration: none;
+            font-weight: 600;
+            color: $graytext;
+            text-transform: uppercase;
+            line-height: 110px;
+            &.active,
+            &:hover {
+                color: $bluedc;
+                border-bottom: 5px solid $bluedc;
+                border-top: 5px solid $white;
+            }
+        }
+    }
+}
+
+
+.jumbotron {
+    background-image: url('../img/jumbotron.jpg');
+    height: 400px;
+    background-size: cover;
+    position: relative;
+    .headline {
+        position: absolute;
+        bottom: 0px;
+        transform: translateY(50%);
+        padding: 0.5rem 1rem;
+        background-color: $bluedc;
+        color: $white;
+        text-transform: uppercase;
+        font-weight: bold;
+    }
+}
