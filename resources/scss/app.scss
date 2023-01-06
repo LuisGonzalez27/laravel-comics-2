@@ -67,3 +67,130 @@ header {
         font-weight: bold;
     }
 }
+
+.wrapper {
+    padding: 3rem 0 1.5rem;
+    a{
+        text-decoration: none;
+        color: $white;
+    }
+}
+
+.wrapper-2 {
+    background-color: $bluedc;
+    color: $white;
+    .buys {
+        @include dflex;
+        height: 150px;
+        .buy {
+            @include dflex;
+            width: calc(100% /5);
+            img {
+                height: 50px;
+            }
+            a {
+                color: $white;
+                text-decoration: none;
+                text-transform: uppercase;
+                padding-left: 15px;
+                &:hover {
+                    color: $black;
+                }
+            }
+        }
+        .buy:last-child img {
+            width: 50px;
+        }
+    }
+}
+
+
+.wrapper-3 {
+    background-image: url("../img/footer-bg.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    overflow: hidden;
+}
+.my-container-3 {
+    display: flex;
+    ul {
+        list-style: none;
+        padding: 0 1.5rem 1rem 0;
+        li a {
+            text-decoration: none;
+            color: $graytext;
+            padding: 2px 0;
+            display: inline-block;
+            &:hover {
+                color: $bluedc;
+            }
+        }
+        li:first-child a {
+            color: $white;
+            font-size: 1.5rem;
+            padding: 1.5rem 0rem 1rem;
+            text-transform: uppercase;
+        }
+    }
+}
+.img-3 {
+    position: absolute;
+    right: 10%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.copy{
+    color: $graytext;
+    a{
+        text-decoration: none;
+    }
+}
+
+.wrapper-4 {
+    background-color: $darkgray;
+    color: $white;
+
+    a {
+        text-decoration: none;
+        color: $white;
+        border: 1px solid $bluedc;
+        padding: 0.5rem 1rem;
+        &:hover:not(.follow) {
+            background-color: $bluedc;
+            color: $black;
+        }
+    }
+    .follow {
+        font-weight: 700;
+        margin-left: auto;
+        border: none;
+        color: $bluedc;
+        &:hover {
+            color: $white;
+        }
+    }
+    .icons {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        div {
+            padding: 10px;
+        }
+        img {
+            cursor: pointer;
+            &:hover {
+                transform: scale(1.1);
+            }
+        }
+    }
+}
+.my-container-4 {
+    display: flex;
+    height: 100px;
+    align-items: center;
+    justify-content: space-between;
+    text-transform: uppercase;
+    max-width: 1140px;
+    margin: 0 auto;
+}

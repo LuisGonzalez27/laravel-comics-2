@@ -1,6 +1,12 @@
 @extends('layouts.app')
 @section('content')
-<section class="container">
-    <h1>tutto funziona</h1>
-</section>
+<div class="wrapper">
+    <div class="my-container">
+        <div class="d-flex justify-content-center">
+            <button class="btn btn-primary">
+                <a class="text-uppercase strong" href="{{ route('comics.index') }}">see comics</a>
+                </button>
+        </div>
+    </div>
+</div>
 @endsection
